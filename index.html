@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A personal academic website: weekly blogs, career and personal updates, research projects, and hiking and cycling notes.">
+  <meta name="theme-color" content="#202321">
+  <title>Your Name — Research & Life</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#blogs">Skip to content</a>
+  <header class="chapter-header">
+    <nav class="chapter-nav" id="chapter-nav" aria-label="Main sections" inert>
+      <a href="#blogs"><span>01 / Blogs</span><span>Weekly field notes</span></a>
+      <a href="#updates"><span>02 / Updates</span><span>Along the way</span></a>
+      <a href="#projects"><span>03 / Projects</span><span>Questions into work</span></a>
+      <a href="#trails"><span>04 / Trails</span><span>On foot & two wheels</span></a>
+      <a href="#academic"><span>05 / Research & CV</span><span>The academic profile</span></a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-controls="chapter-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-top"><a class="wordmark" href="#top" data-profile="name">Your Name</a><a class="hero-profile-link" href="#academic">Research & CV <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-main"><p class="eyebrow hero-eyebrow" id="hero-affiliation">RESEARCH & LIFE</p><h1 id="hero-title"><span>Your</span><span>Name<span class="orange-dot">.</span></span></h1><p class="hero-introduction" id="hero-introduction">Research, weekly reflections,<br>and life beyond the desk.</p></div>
+      <div class="hero-bottom"><span class="hero-coordinates">A PERSONAL NOTEBOOK<br>IDEAS / WORK / OUTDOORS</span><a class="scroll-cue" href="#blogs">Start with the latest <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="section blogs-section" id="blogs" aria-labelledby="blogs-title">
+      <div class="section-meta"><p class="eyebrow">01 / BLOGS</p><p>Short reads. Every week.</p></div>
+      <div class="section-title-row"><h2 id="blogs-title">Field notes<span class="accent-text">.</span></h2><p>On research, ideas,<br>and the everyday.</p></div>
+      <div class="blog-grid" id="blog-list"></div>
+      <div class="section-bottom"><p id="blog-status" class="content-status" aria-live="polite"></p><button class="text-button" id="more-blogs" type="button" hidden>View all notes <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section class="section updates-section" id="updates" aria-labelledby="updates-title">
+      <div class="section-meta"><p class="eyebrow">02 / UPDATES</p><p>Career & personal</p></div>
+      <div class="section-title-row"><h2 id="updates-title">Along the way.</h2><div class="filter-group" role="group" aria-label="Filter updates"><button data-update-filter="All" aria-pressed="true">All</button><button data-update-filter="Career" aria-pressed="false">Career</button><button data-update-filter="Personal" aria-pressed="false">Personal</button></div></div>
+      <div class="updates-list" id="updates-list" aria-live="polite"></div>
+      <div class="section-bottom"><p class="content-status" id="update-status"></p><button class="text-button" id="more-updates" type="button" hidden>Show more updates <span aria-hidden="true">↓</span></button></div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section projects-intro"><div class="section-meta"><p class="eyebrow">03 / PROJECTS</p><p>Current & previous work</p></div><div class="section-title-row"><h2 id="projects-title">Questions<br>into work.</h2><p>The question. The approach.<br>The contribution.</p></div></div>
+      <div class="project-scroll" id="project-scroll"><div class="project-sticky"><div class="project-viewport" tabindex="0" role="region" aria-label="Research projects. Use the project buttons below or swipe to explore."><div class="project-track" id="project-list"></div></div><div class="project-controls"><p>Explore the work <span aria-hidden="true">→</span></p><div class="project-dots" id="project-dots" role="group" aria-label="Jump to a project"></div><span class="project-counter" id="project-counter">01 / 03</span></div><div class="project-progress" aria-hidden="true"><span></span></div></div></div>
+    </section>
+
+    <section class="section trails-section" id="trails" aria-labelledby="trails-title">
+      <div class="section-meta"><p class="eyebrow">04 / HIKING & CYCLING</p><p>Life beyond the desk</p></div>
+      <div class="section-title-row"><h2 id="trails-title">Out of office<span class="accent-text">.</span></h2><p>On foot. On two wheels.<br>At a different pace.</p></div>
+      <div class="trail-toolbar"><div class="filter-group" role="group" aria-label="Filter trails"><button data-trail-filter="All" aria-pressed="true">All routes</button><button data-trail-filter="Hiking" aria-pressed="false">Hiking</button><button data-trail-filter="Cycling" aria-pressed="false">Cycling</button></div><span class="content-status" id="trail-status" aria-live="polite"></span></div>
+      <div class="trail-grid" id="trail-list"></div>
+    </section>
+
+    <section class="section academic-section" id="academic" aria-labelledby="academic-title">
+      <div class="section-meta"><p class="eyebrow">05 / ACADEMIC PROFILE</p><p>Research, publications & CV</p></div>
+      <div class="section-title-row"><h2 id="academic-title">The work<br>in context.</h2><p>Where I am now.<br>What comes next.</p></div>
+      <div class="academic-grid"><div class="academic-identity"><h3 data-profile="name">Your Name</h3><p id="academic-affiliation">Research field · Institution</p><p id="profile-bio" class="academic-bio"></p><div class="profile-links" id="profile-links"></div><p id="postdoc-status" class="postdoc-status" hidden>Open to conversations about postdoctoral opportunities.</p></div><div class="academic-detail"><div class="research-block"><span class="eyebrow">RESEARCH FOCUS</span><p id="research-focus"></p></div><div class="research-block"><span class="eyebrow">METHODS & EXPERTISE</span><div id="research-methods"></div></div><div class="research-block"><span class="eyebrow">NEXT RESEARCH QUESTIONS</span><div id="research-next"></div></div></div></div>
+      <div class="publications-heading"><h3>Selected publications & outputs</h3><span class="eyebrow" id="publication-count"></span></div><div id="publication-list"></div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><p class="eyebrow">A CONVERSATION STARTS HERE</p><h2 id="contact-title">Let’s compare<br>notes.</h2><div id="contact-details"></div><footer><a class="wordmark" href="#top" data-profile="name">Your Name</a><p>Research & life · <span id="current-year">2026</span></p><a href="#top">Back to top ↑</a></footer></section>
+  </main>
+  <noscript><p class="noscript-message">Please enable JavaScript to read the posts, projects, trails, and research profile.</p></noscript>
+
+  <dialog class="reader-dialog" aria-labelledby="reader-title"><div class="reader-toolbar"><p class="eyebrow" id="reader-kicker"></p><button class="reader-close" type="button" aria-label="Close article">×</button></div><article class="reader-article"><p class="reader-meta" id="reader-meta"></p><h2 id="reader-title"></h2><div id="reader-body"></div></article><div class="reader-bottom"><button class="text-button reader-done" type="button">Back to the notebook <span aria-hidden="true">↙</span></button><span class="reader-sample" id="reader-sample"></span></div></dialog>
+</body>
+</html>
